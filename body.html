@@ -1,0 +1,31 @@
+<head>
+
+<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js"></script>
+<script src="dates.js"></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css" />
+
+</head>
+
+<body>
+<div id="calendar"></div>
+<script>
+
+// Initialize calendar
+new Calendar('#calendar', {
+  dataSource: dates,
+  enableRangeSelection: false,
+  style: 'background'
+})
+
+// Register events
+document.querySelector('#calendar').addEventListener('clickDay', function(e) {
+url = e.date.getFullYear() +  '-' + ('0' + (e.date.getMonth()+1)).slice(-2) +  '-' + ('0' + e.date.getDate()).slice(-2) ;
+// user clicks the colored cell if events length = 1, 
+  if (e.events.length == 1) {
+  window.open(url, '_blank').focus();
+  }
+})
+
+</script>
+
+</body>
