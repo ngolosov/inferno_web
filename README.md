@@ -40,9 +40,6 @@ This script processes infrared (IR) and visible images, and performs the followi
 * Perform temperature predictions using the PredRNN model.
 * Create prediction graphs and save them as images.
 
-## Contributing
-
-Please feel free to create issues or submit pull requests for any improvements or bug fixes. We appreciate your help in improving the project.
 
 ## License
 
